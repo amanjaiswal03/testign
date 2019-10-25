@@ -28,6 +28,4 @@ mongoose.connection.once('open', () => {
 
 app.get('/', (req, res) => res.send('hello'));
 
-app.listen(3000, () => {
-    console.log('now listening for request on port 4000');
-})
+app.listen(process.env.PORT || 8888)
